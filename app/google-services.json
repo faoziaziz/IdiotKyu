@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "915630261650",
+    "firebase_url": "https://idiotkyu.firebaseio.com",
+    "project_id": "idiotkyu",
+    "storage_bucket": "idiotkyu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:915630261650:android:de01ec596b8d92b2",
+        "android_client_info": {
+          "package_name": "org.labseni.idiotkyu"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "915630261650-igcjn8gskq0g37op1fpjqv5vqrrq37ki.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.labseni.idiotkyu",
+            "certificate_hash": "470cfc893ace33eabfb1dd044bda762a0f7bf763"
+          }
+        },
+        {
+          "client_id": "915630261650-12dvj1mka366b26oqene654b4teb1ur3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxtyVC1NAteiYTgXuj53zza6B_g1SCFWM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "915630261650-sou70h39ks1roglio2dsd2oj0utoh2v2.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.labseni.idiotkyu"
+              }
+            },
+            {
+              "client_id": "915630261650-12dvj1mka366b26oqene654b4teb1ur3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
