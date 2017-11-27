@@ -23,7 +23,7 @@ public class cekjadwal extends AppCompatActivity {
             {
                 Intent i1 = new Intent(getApplication(), tambahjadwal.class);
                 startActivity(i1);
-
+		
 
             }
 
