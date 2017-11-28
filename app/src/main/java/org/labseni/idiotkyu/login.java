@@ -22,7 +22,13 @@ public class login extends AppCompatActivity implements View.OnClickListener{
         	setContentView(R.layout.activity_login);
 		
 		firebaseAuth= FirebaseAuth.getInstance();
- 
+ 		if(firebaseAuth.getCurrentUser()!=null)
+		{
+			//profile activity
+			finish();
+			startActivity(new Intent(getApplicationContext(), MENUUTAMA.class));
+
+		}
 		progressDialog= new ProgressDialog(this);
         	buttonRegister = (Button) findViewById(R.id.t_daftar);
 		editTextEmail = (EditText) findViewById(R.id.editTextEmail);
@@ -35,7 +41,7 @@ public class login extends AppCompatActivity implements View.OnClickListener{
 	public void registerUser()
 	{
 		String email=editTextEmail.getText().toString().trim();
-		String password=edittextPassword.getText().toString().trim();
+		String password=editTextPassword.getText().toString().trim();
 		if(TextUtils.isEmpty(email))
 		{
 			//email is emty
@@ -60,8 +66,9 @@ public class login extends AppCompatActivity implements View.OnClickListener{
 		if(task.isSuccessful())
 
 		{
-			//ini dia kalau telah di register dan akan login dalam kode ini
-			Toast.makeText(MainActivity.this,"teregister berhasil", Toast.LENGTH_SHORT).show();
+
+			finish();
+			startActivity(new Intent(getApplicationContext(), MENUUTAMA.class));
 
 		}
 		else
@@ -84,6 +91,8 @@ public class login extends AppCompatActivity implements View.OnClickListener{
 		if (view==textViewSignin)
 		{
 			//open login activity
+			finish();
+			startActivity(new Intent(this, Daftar.class)
 		}
 	}
 
