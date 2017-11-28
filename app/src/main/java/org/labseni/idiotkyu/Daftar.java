@@ -3,18 +3,29 @@
 */ 
 package org.labseni.idiotkyu;
 
-import android.support.v7.app.AppCompatActivity;
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.EditText;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 
 public class Daftar extends AppCompatActivity implements View.OnClickListener{
    	private Button buttonSignIn;
 	private EditText editTextEmail;
 	private EditText editTextPassword;
-	private TextView textViewSignup;
+	private TextView textViewSignUp;
 	private ProgressDialog progressDialog;
 	private FirebaseAuth firebaseAuth;
 
@@ -34,15 +45,15 @@ public class Daftar extends AppCompatActivity implements View.OnClickListener{
 
 		}
 
-		editTextEmail =(EditText) findViewByID(R.id.editTextEmail);
-		editTextPassword =(EditText) findViewByID(R.id.editTextPassword);
-		buttonSignin =(Button) findViewByID(R.id.buttonSignin);
-		textViewSignup =(TextView) findViewByID(R.id.textViewSignup);
+		editTextEmail =(EditText) findViewById(R.id.editTextEmail);
+		editTextPassword =(EditText) findViewById(R.id.editTextPassword);
+		buttonSignIn =(Button) findViewById(R.id.buttonSignin);
+		textViewSignUp =(TextView) findViewById(R.id.textViewSignup);
 		
 		progressDialog= new ProgressDialog(this);
 
 		buttonSignIn.setOnClickListener(this);
-		textViewSignup.setOnClickListener(this);
+		textViewSignUp.setOnClickListener(this);
 
     	}
 
@@ -61,7 +72,7 @@ public class Daftar extends AppCompatActivity implements View.OnClickListener{
 		if(TextUtils.isEmpty(password))
 		{
 			//password is empty
-			Toast.makeText(this, "Silfupley, password", Toast.LENGTH_SHORT).show()
+			Toast.makeText(this, "Silfupley, password", Toast.LENGTH_SHORT).show();
 			//stopping execution furher
 			return;
 		}
@@ -89,7 +100,7 @@ public class Daftar extends AppCompatActivity implements View.OnClickListener{
 		if(view==buttonSignIn){
 		userLogin();
 		}
-		if (view==textViewSignup)
+		if (view==textViewSignUp)
 		{	
 			finish();
 			startActivity(new Intent(this, login.class));

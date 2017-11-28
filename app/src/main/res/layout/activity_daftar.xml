@@ -8,81 +8,41 @@
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/s_nama"
-        android:layout_width="215dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="19dp"
-        android:layout_marginTop="89dp"
-        android:ems="10"
-        android:hint="Nama"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/editText4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
-
-    <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/editTextEmail"
         android:layout_width="215dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="25dp"
         android:ems="10"
-        android:hint="NIM"
+        android:hint="Email"
         android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/editText5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/s_nama"
         tools:layout_constraintLeft_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_constraintTop_creator="1"
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="154dp" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/editTextPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="29dp"
         android:ems="10"
         android:hint="Password"
         android:inputType="time"
-        app:layout_constraintBottom_toTopOf="@+id/editText6"
-        app:layout_constraintStart_toStartOf="@+id/editText4"
-        app:layout_constraintTop_toBottomOf="@+id/editText4"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
-
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="89dp"
-        android:ems="10"
-        android:hint="Ulangi Password"
-        android:inputType="textMultiLine"
-        app:layout_constraintBottom_toTopOf="@+id/t_daftar"
-        app:layout_constraintStart_toStartOf="@+id/editText5"
-        app:layout_constraintTop_toBottomOf="@+id/editText5"
-        tools:layout_constraintBottom_creator="1"
         tools:layout_constraintRight_creator="1"
-        tools:layout_constraintTop_creator="1" />
+        tools:layout_editor_absoluteX="85dp"
+        tools:layout_editor_absoluteY="220dp" />
 
     <Button
-        android:id="@+id/t_daftar"
+        android:id="@+id/buttonSignin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="34dp"
         android:text="Daftar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText6"
         tools:layout_constraintBottom_creator="1"
         tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintRight_creator="1" />
+        tools:layout_constraintRight_creator="1"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="308dp" />
 
     <android.support.constraint.Guideline
         android:id="@+id/guideline"
@@ -111,4 +71,12 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="20dp" />
+
+    <TextView
+        android:id="@+id/textViewSignup"
+        android:layout_width="wrap_content"
+        android:layout_height="11dp"
+        android:text="Belum punya akun. Daftar?"
+        tools:layout_editor_absoluteX="148dp"
+        tools:layout_editor_absoluteY="398dp" />
 </android.support.constraint.ConstraintLayout>
